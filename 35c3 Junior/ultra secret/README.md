@@ -54,7 +54,8 @@ zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 0.86369395256
 8aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 0.860785007477
 9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 0.862840890884
 ```
-And I notice when the payload started it with a '1', it took 0.66s more to respond and that the rest averaged at the same time to respond. So I gether that the hash function takes 0.66s to be executed on the server's machine, With that a created a script to extract char by char of the password using the time it takes to the server to respond.  
+And I notice when the payload started it with a '1', it took 0.66s more to respond and that the rest averaged at the same time to respond. So I gether that the hash function takes 0.66s to be executed on the server's machine.  
+With that a created a script to extract char by char of the password using the time it takes to the server to respond.  
 
 After a long time, the flag poped out on the terminal
 `35C3_timing_attacks_are_fun!_:)`  
