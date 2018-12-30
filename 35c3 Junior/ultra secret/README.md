@@ -9,9 +9,9 @@ When you try to connect with the nc it ask you, very politly, to enter the "very
 $ nc 35.207.158.95 1337
 $ Please enter the very secret password:
 ```
-Looking to the souse code we see that is in Rust.
-It loads some hashes to a vector of strings and load the flag to the the flag variable. And then it ask for the password. The password must have at least 32 char and it only uses the 32 firsts, and for each char of the password it calls function hash on it. If the hash of the char didn't match with the loaded one it killed the program whitch is useful for the attack. If it passes all the tests the flag is cat'd out.   
-![hash function](https://i.imgur.com/NnvsxYp.png)
+Looking to the source code we see that is in Rust.
+It loads some hashes to a vector of strings and load the flag to the the flag variable. And then it ask for the password. The password must have at least 32 char and it only uses the first 32, and for each char of the password it calls function hash on it. If the hash of the char didn't match with the loaded one it killed the program whitch is useful for the attack. If it passes all the tests the flag is cat'd out.   
+![hash function](https://i.imgur.com/NnvsxYp.png)  
 Lookin at the hash function we see that peforms a SHA256 on itself 9999 times. Instinctively, I though that would take a long time, so I'll try a Timming Attack.  
 
 So with a payload of containing 32 'a' it took the server 0.85s to respond. So I started to change the first char of the payload and see how much time it takes to respond.  
@@ -55,7 +55,7 @@ zaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 0.86369395256
 9aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa 0.862840890884
 ```
 And I notice when the payload started it with a '1', it took 0.66s more to respond and that the rest averaged at the same time to respond. So I gether that the hash function takes 0.66s to be executed on the server's machine.  
-With that a created a script to extract char by char of the password using the time it takes to the server to respond.  
+With that a created a script to extract char by char of the password using the time it takes to the server to respond.    
 
 After a long time, the flag poped out on the terminal
 `35C3_timing_attacks_are_fun!_:)`  
