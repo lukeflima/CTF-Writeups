@@ -2,12 +2,16 @@
 The challange was:  
 ![Challenge](https://i.imgur.com/UsDfSEZ.png)
 
-When you open the link this shows up.
+When you open the link this shows up.  
 ![Firt page](https://i.imgur.com/HjFvFt6.png)
 
-When you enter something o the input box and hit submit it return an ID, a password for the note and a link to view your note.  
-![Return from submit](https://i.imgur.com/ydwZsuL.png)
-Clicking on the link it sends you to a page with whatever you wrote wrinten on it. The URL of this is `http://35.207.120.163/view.php?id=-4133353959107185265&pw=437b930db84b8079c2dd804a71936b5f`   
+When you enter something o the input box and hit submit it return an ID, a password for the note and a link to view your note.    
+![Return from submit](https://i.imgur.com/ydwZsuL.png)   
+
+Clicking on the link it sends you to a page with whatever you wrote wrinten on it. The URL of this is 
+```
+http://35.207.120.163/view.php?id=-4133353959107185265&pw=437b930db84b8079c2dd804a71936b5f
+```
 
 Going on the page source code you can download the actual php souce code.  
 ```
