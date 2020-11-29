@@ -36,6 +36,8 @@ Para consegui essa energia, fiz um script para colocar letras aleatórias na fre
 
 
 ![Rumias](imagens/lumias.png)
+
+
 E o cartão, que pedia para ser passado, só precisaria retornar com um múltiplo de 10 ao passar pela função. Testei alguns números até chegar em `265`.
 
 Por fim, simplesmente alterei o nome da conta do Discord para `Rumias` e enviei o comando para `$donate 265` para o bot que respondeu com a flag.
